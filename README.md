@@ -66,7 +66,7 @@ return f"Hello {name}. How are you?"
 ```
 Do you really understand what the f-string is and how it works? Can you explain it during an interview? Using code that you are not certain about can cause problems. It's fine to look up how others solve similar problems -- it's important however that you understand how the solution works and be in position to describe your understading. **In your reflection** describe how the f-string works by discussing couple of different scenarios they can be used.
 
-**Iterating over a list without understanding how the `for` statement works.** Or, for that matter, how lists work. For-loops and lists are two core topics in programming. Everyone will expect you to know how the work and to be able to describe their functionality. **In your reflection** describe the for-statement iterates over a list by using a couple of examples.
+**Iterating over a list without understanding how the `for` statement works.** Or, for that matter, how lists work. For-loops and lists are two core topics in programming. Everyone will expect you to know how the work and to be able to describe their functionality. **In your reflection** describe how the for-statement iterates over a list by using a couple of examples.
 
 **Repeating arithmetic operations.** When solving the quadratic equation, the quantity $b^2-4ac$ plays a major role. If the equation has real solutions, we use the quantity (called the *discriminant)* in three places. We don't have to evaluate it everytime, i.e., we do not have to perform the operation `b*b-4*a*c` in three different places. That's where using a variable comes handy. We can define a variable
 ```python
