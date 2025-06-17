@@ -33,7 +33,7 @@ def diamond() -> None:
     draw_line(TOP_MIDDLE_LINE)
     draw_line(TOP_LINE)
 
-
+diamond()
 
 def draw_right_triangle () -> None:
     N = int(input("How tall do you want the right triangle to be?"))
@@ -52,6 +52,8 @@ def draw_right_triangle () -> None:
 
     draw(N + 1)
 
+draw_right_triangle()
+
 def compound_interest() -> None:
     N = int(input("How much money is your principal? (Money you're starting with)."))
     T = int(input("How long to you plan to leave your money in this acount?"))
@@ -63,3 +65,51 @@ def compound_interest() -> None:
 
 compound_interest()
 
+def draw_hollow_square() -> None:
+    S = int(input("How big do you want the hollow square to be?"))
+    T = int(input("How thick do you want the walls to be?"))  
+    if T > S // 2:
+        print("Please choose a smaller thickness and rerun the program")
+        return
+    
+    fill_char = input("What character do you want to draw the hollow square with?")   
+    fill_space = ' '
+
+    def draw_top_bottom(S, T):
+        for i in range(T):
+        # print T many times
+            print(fill_char * S)
+
+    def draw_middle(S, T):
+        space = (S - 2*T) * fill_space
+        for i in range(T):
+            print((fill_char * T) + (space) + (fill_char * T))
+
+    draw_top_bottom(S, T)
+    draw_middle(S, T)
+    draw_top_bottom(S, T)
+
+draw_hollow_square()
+
+
+# REFLECTION
+
+"""
+1.
+I did not constrain the parameter of greet as string, or specify that
+another string should be returned. I also did not make it an f-string
+and rather just used addition signs to be able to input the name
+into the greeting.
+
+I should have specifies the string to string apspect of the function
+to clarify that it is made for names and words rather than numbers.
+
+Additionally, using an f-string would probably make the code look cleaner
+and easier to read.
+
+
+
+
+
+
+"""
