@@ -33,15 +33,33 @@ def diamond() -> None:
     draw_line(TOP_MIDDLE_LINE)
     draw_line(TOP_LINE)
 
-diamond()
 
 
 def draw_right_triangle () -> None:
     N = int(input("How tall do you want the right triangle to be?"))
+    if N % 2 == 1:
+        print("Please choose an even number for a more accurate drawing, and rerun the program.")
+        return
+    
     fill_char = input("What character would you like to use to draw the triangle?")
 
     RATIO = 1/1 
-    #height to width. I'm guessing the width will be the same as the height.
+    BOTTOM_LINE = int(N)
 
-    BOTTOM_WIDTH = int(N)
-    
+    def draw(height: int):
+        for i in range(0, height):
+            print(fill_char * i)
+
+    draw(N + 1)
+
+def compound_interest() -> None:
+    N = int(input("How much money is your principal? (Money you're starting with)."))
+    T = int(input("How long to you plan to leave your money in this acount?"))
+ 
+
+    for year in range(T):
+           N = N * (1 + 0.05)
+           print(f"At year {year + 1}, your new balance will be ${N:.2f}")
+
+compound_interest()
+
